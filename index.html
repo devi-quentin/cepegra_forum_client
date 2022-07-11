@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Forum</title>
+  </head>
+  <body class="flex flex-col h-screen items-center">
+    <header class="flex justify-center items-center bg-cyan-800 w-full">
+      <div class="flex justify-between items-center w-6/12 h-20">
+        <h1 class="text-3xl font-bold text-cyan-50">Forum</h1>
+        <h1 class="text-3xl font-bold text-cyan-50">
+            <form action="" method="POST" id="formLogin" class="flex items-center gap-2">
+                <input value="deviquentin" class="w-36 font-normal text-sm p-1 bg-cyan-50 text-cyan-800 rounded" type="text" id="login" placeholder="Login">
+                <input value="pass1" class="w-36 font-normal text-sm p-1 bg-cyan-50 text-cyan-800 rounded" type="password" id="password" placeholder="Password">
+                <button class="font-normal text-sm">Se connecter</button>
+            </form>
+
+            <div id="textLogin" class="font-normal text-base hidden"><a href="#">Déconnexion</a></div>
+        </h1>
+      </div>
+    </header>
+
+    <div id="app" class="h-full pt-6 w-6/12">
+      <h2 class="text-xl mb-5">Liste des tickets</h2>
+      <div id="tickets-list"></div>
+    </div>
+
+    <footer class="flex justify-center items-center w-full h-20 bg-cyan-800">
+      <p class="text-xl text-cyan-50">2022 - Quentin Devillers</p>
+    </footer>
+    <script src="script/main.js"></script>
+  </body>
+</html>
