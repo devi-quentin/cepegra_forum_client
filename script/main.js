@@ -51,7 +51,7 @@ const openTicket = (id) => {
         let tmp = `
           <div class="border border-2 mb-5 p-2 rounded cursor-pointer">
             <div>
-              <span class="mr-2 text-slate-400">#${data.id}</span>${data.title} par ${data.id_user}
+              <span class="mr-2 text-slate-400">#${data.id}</span>${data.title} par ${data.author}
             </div>
             <div class="mt-5">
               ${data.content}
