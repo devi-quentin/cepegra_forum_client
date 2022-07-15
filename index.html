@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/style.css" />
     <title>Forum</title>
   </head>
-  <body class="flex flex-col h-screen items-center">
+  <body class="flex flex-col min-h-screen items-center">
     <header class="flex justify-center items-center bg-cyan-800 w-full">
       <div class="flex justify-between items-center w-6/12 h-20">
         <h1 class="text-3xl font-bold text-cyan-50">Forum</h1>
@@ -19,14 +19,23 @@
                 <button class="font-normal text-sm">Se connecter</button>
             </form>
 
-            <div id="textLogin" class="font-normal text-base hidden"><a href="#">Déconnexion</a></div>
+            <div id="textLogin" class="font-normal text-base hidden"><a href="#" id="logout">Déconnexion</a></div>
         </h1>
       </div>
     </header>
 
     <div id="app" class="h-full pt-6 w-6/12">
-      <h2 class="text-xl mb-5">Liste des tickets</h2>
+      <h2 id="chemin" class="text-xl mb-5">Accueil</h2>
       <div id="tickets-list"></div>
+      <div id="addTicketBox" class="border border-2 mb-5 p-2 rounded hidden">
+        <h2 class="text-xl mb-5" id="addTicketBoxTitle">Nouveau ticket</h2>
+        <form action="" method="POST" id="addTicketForm">
+          <input class="w-full font-normal text-sm p-1 bg-gray-100 text-cyan-800 mb-5 rounded" type="text" id="newTicketTitle" name="newTicketTitle" placeholder="Titre du ticket">
+          <textarea id="newTicketContent" class="w-full font-normal text-sm p-1 bg-gray-100 text-cyan-800 mb-5 rounded" name="newTicketContent" id="" placeholder="Contenu du ticket ici" rows="10" required></textarea>
+          <input type="hidden" name="" id="idTicket" value="NULL">
+          <button class="font-normal text-sm bg-cyan-800 p-1 text-cyan-50 rounded">Poster</button>
+        </form>
+      </div>
     </div>
 
     <footer class="flex justify-center items-center w-full h-20 bg-cyan-800">
